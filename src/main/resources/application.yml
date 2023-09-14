@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mysql-app
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mpro?rewriteBatchedStatements=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: mpro
+    password: mpro1234
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+
+shedlock:
+  table: shedlock
+
+logging.level:
+  org.hibernate.SQL: debug
